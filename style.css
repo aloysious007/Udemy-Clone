@@ -61,8 +61,6 @@ background-color: transparent;
 .mylearning{
     position:relative;
     cursor: pointer;
-
-
 }
 
 .mylearning__popup
@@ -93,14 +91,25 @@ background-color: aqua;
 color: black;
 padding: 10px;
 border-radius: 30px;
+border: solid aqua 1px;
 }
+.categories p:hover{
+    transition: 1s;
+    background-color:black;
+    color:aqua;
+    cursor: pointer;
+    border: solid aqua 1px;
+}
+
+
+
+
 .sale-image{
     position: relative;
 }
 
 .sale-image img{
     width: 100%;
-
 }
 
 .sale-image__offer{
@@ -111,8 +120,24 @@ border-radius: 30px;
     position:absolute;
     top: 10%;
     left: 10%;
-
+    animation:zoom;
+    animation-duration: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
 }
+
+@keyframes zoom {
+    0%{
+        transform: scale(0);
+        opacity:0;
+    }
+    
+    100%{
+        transform: scale(1);
+        opacity:1;
+    }
+}
+
 
 .recommended{
     padding: 10px;
